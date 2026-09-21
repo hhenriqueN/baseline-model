@@ -1,0 +1,292 @@
+{
+  "schema_version": 1,
+  "networks": {
+    "lateral": {
+      "checkpoint_path": "models/lateral/final/checkpoint.pt",
+      "architecture": {
+        "class": "LateralMLP",
+        "n_inputs": 11,
+        "n_hidden": 64,
+        "n_outputs": 2,
+        "layers": [
+          "Linear(11,64)",
+          "SiLU",
+          "Linear(64,64)",
+          "SiLU",
+          "Linear(64,2)"
+        ],
+        "output_activation": [
+          "linear",
+          "linear"
+        ],
+        "batch_norm": false,
+        "dropout": false
+      },
+      "feature_order": [
+        "along_track_m",
+        "cross_track_error_m",
+        "heading_error_sin",
+        "heading_error_cos",
+        "agl_ft",
+        "roll_deg",
+        "sideslip_rad",
+        "roll_rate_degps",
+        "yaw_rate_degps",
+        "airspeed_kt",
+        "lateral_body_speed_fps"
+      ],
+      "label_order": [
+        "aileron_command",
+        "rudder_command"
+      ],
+      "input_normalization": {
+        "policy": "z-score (train-fold/final-train statistics only), clip to [clip_min, clip_max]",
+        "zscored_variables": [
+          "along_track_m",
+          "cross_track_error_m",
+          "agl_ft",
+          "roll_deg",
+          "sideslip_rad",
+          "roll_rate_degps",
+          "yaw_rate_degps",
+          "airspeed_kt",
+          "lateral_body_speed_fps",
+          "glideslope_error_deg",
+          "height_above_threshold_ft",
+          "pitch_deg",
+          "alpha_deg",
+          "pitch_rate_degps",
+          "airspeed_error_kt",
+          "vertical_speed_fps"
+        ],
+        "not_zscored_variables": [
+          "heading_error_sin",
+          "heading_error_cos",
+          "flaps_state_norm",
+          "flare_flag"
+        ],
+        "mean": {
+          "along_track_m": -907.3887170589485,
+          "cross_track_error_m": 24.651966991710825,
+          "agl_ft": 382.7690407176422,
+          "roll_deg": -0.43524009775656153,
+          "sideslip_rad": -0.03965330461459537,
+          "roll_rate_degps": -0.015135219822572682,
+          "yaw_rate_degps": 0.1477782149738691,
+          "airspeed_kt": 66.29704606383764,
+          "lateral_body_speed_fps": 8.99550076731642,
+          "glideslope_error_deg": 11.636358084227465,
+          "height_above_threshold_ft": 341.12126485960556,
+          "pitch_deg": -2.446805644246749,
+          "alpha_deg": 0.7273065582881096,
+          "pitch_rate_degps": 0.03230319091233346,
+          "airspeed_error_kt": 1.2970460638376484,
+          "vertical_speed_fps": -6.370936575819659
+        },
+        "std": {
+          "along_track_m": 1106.29877202988,
+          "cross_track_error_m": 41.335743611935776,
+          "agl_ft": 268.8175496163037,
+          "roll_deg": 4.560725857538856,
+          "sideslip_rad": 0.13522855375867016,
+          "roll_rate_degps": 3.9605317370700077,
+          "yaw_rate_degps": 5.582150237307506,
+          "airspeed_kt": 11.378393323191274,
+          "lateral_body_speed_fps": 11.869676670623278,
+          "glideslope_error_deg": 13.500185304224122,
+          "height_above_threshold_ft": 242.66917573624426,
+          "pitch_deg": 3.468341905085633,
+          "alpha_deg": 15.725863849327077,
+          "pitch_rate_degps": 1.981121977593266,
+          "airspeed_error_kt": 11.378393323191274,
+          "vertical_speed_fps": 5.2454928539348895
+        },
+        "clip_min": -5.0,
+        "clip_max": 5.0,
+        "scaler_source_file": "data/scalers/final_all_valid/scaler_final_all_valid.json",
+        "scaler_schema_version": 1
+      },
+      "output_saturation": {
+        "aileron_command": [
+          -1.0,
+          1.0
+        ],
+        "rudder_command": [
+          -1.0,
+          1.0
+        ]
+      },
+      "labels_normalized": false,
+      "n_epochs_trained": 15,
+      "training_config": {
+        "seed": 42,
+        "optimizer": "AdamW",
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 256,
+        "max_epochs": 300,
+        "early_stopping_patience": 25,
+        "grad_clip_norm": 5.0
+      },
+      "dataset_version": "baseline_core (final_all_valid, includes fixed diagnostic holdout session)",
+      "n_train_rows": 15508,
+      "excluded_phases_from_training": [
+        "TOUCHDOWN_CONFIRMED",
+        "BOUNCE",
+        "ROLLOUT",
+        "COMPLETE",
+        "GO_AROUND"
+      ],
+      "eligible_training_phases": [
+        "FINAL_APPROACH_ESTABLISHED",
+        "FLARE",
+        "CONTACT_CANDIDATE"
+      ]
+    },
+    "longitudinal": {
+      "checkpoint_path": "models/longitudinal/final/checkpoint.pt",
+      "architecture": {
+        "class": "LongitudinalMLP",
+        "n_inputs": 12,
+        "n_hidden": 64,
+        "n_outputs": 2,
+        "layers": [
+          "Linear(12,64)",
+          "SiLU",
+          "Linear(64,64)",
+          "SiLU",
+          "elevator_head=Linear(64,1)[linear]",
+          "throttle_head=Linear(64,1)[sigmoid]"
+        ],
+        "output_activation": [
+          "linear",
+          "sigmoid"
+        ],
+        "batch_norm": false,
+        "dropout": false
+      },
+      "feature_order": [
+        "along_track_m",
+        "glideslope_error_deg",
+        "height_above_threshold_ft",
+        "agl_ft",
+        "pitch_deg",
+        "alpha_deg",
+        "pitch_rate_degps",
+        "airspeed_kt",
+        "airspeed_error_kt",
+        "vertical_speed_fps",
+        "flaps_state_norm",
+        "flare_flag"
+      ],
+      "label_order": [
+        "elevator_effective",
+        "throttle_command"
+      ],
+      "input_normalization": {
+        "policy": "z-score (train-fold/final-train statistics only), clip to [clip_min, clip_max]",
+        "zscored_variables": [
+          "along_track_m",
+          "cross_track_error_m",
+          "agl_ft",
+          "roll_deg",
+          "sideslip_rad",
+          "roll_rate_degps",
+          "yaw_rate_degps",
+          "airspeed_kt",
+          "lateral_body_speed_fps",
+          "glideslope_error_deg",
+          "height_above_threshold_ft",
+          "pitch_deg",
+          "alpha_deg",
+          "pitch_rate_degps",
+          "airspeed_error_kt",
+          "vertical_speed_fps"
+        ],
+        "not_zscored_variables": [
+          "heading_error_sin",
+          "heading_error_cos",
+          "flaps_state_norm",
+          "flare_flag"
+        ],
+        "mean": {
+          "along_track_m": -907.3887170589485,
+          "cross_track_error_m": 24.651966991710825,
+          "agl_ft": 382.7690407176422,
+          "roll_deg": -0.43524009775656153,
+          "sideslip_rad": -0.03965330461459537,
+          "roll_rate_degps": -0.015135219822572682,
+          "yaw_rate_degps": 0.1477782149738691,
+          "airspeed_kt": 66.29704606383764,
+          "lateral_body_speed_fps": 8.99550076731642,
+          "glideslope_error_deg": 11.636358084227465,
+          "height_above_threshold_ft": 341.12126485960556,
+          "pitch_deg": -2.446805644246749,
+          "alpha_deg": 0.7273065582881096,
+          "pitch_rate_degps": 0.03230319091233346,
+          "airspeed_error_kt": 1.2970460638376484,
+          "vertical_speed_fps": -6.370936575819659
+        },
+        "std": {
+          "along_track_m": 1106.29877202988,
+          "cross_track_error_m": 41.335743611935776,
+          "agl_ft": 268.8175496163037,
+          "roll_deg": 4.560725857538856,
+          "sideslip_rad": 0.13522855375867016,
+          "roll_rate_degps": 3.9605317370700077,
+          "yaw_rate_degps": 5.582150237307506,
+          "airspeed_kt": 11.378393323191274,
+          "lateral_body_speed_fps": 11.869676670623278,
+          "glideslope_error_deg": 13.500185304224122,
+          "height_above_threshold_ft": 242.66917573624426,
+          "pitch_deg": 3.468341905085633,
+          "alpha_deg": 15.725863849327077,
+          "pitch_rate_degps": 1.981121977593266,
+          "airspeed_error_kt": 11.378393323191274,
+          "vertical_speed_fps": 5.2454928539348895
+        },
+        "clip_min": -5.0,
+        "clip_max": 5.0,
+        "scaler_source_file": "data/scalers/final_all_valid/scaler_final_all_valid.json",
+        "scaler_schema_version": 1
+      },
+      "output_saturation": {
+        "elevator_effective": [
+          -1.0,
+          1.0
+        ],
+        "throttle_command": [
+          0.0,
+          1.0
+        ]
+      },
+      "labels_normalized": false,
+      "n_epochs_trained": 10,
+      "training_config": {
+        "seed": 42,
+        "optimizer": "AdamW",
+        "lr": 0.001,
+        "weight_decay": 0.0001,
+        "batch_size": 256,
+        "max_epochs": 300,
+        "early_stopping_patience": 25,
+        "grad_clip_norm": 5.0
+      },
+      "dataset_version": "baseline_core (final_all_valid, includes fixed diagnostic holdout session)",
+      "n_train_rows": 15508,
+      "excluded_phases_from_training": [
+        "TOUCHDOWN_CONFIRMED",
+        "BOUNCE",
+        "ROLLOUT",
+        "COMPLETE",
+        "GO_AROUND"
+      ],
+      "eligible_training_phases": [
+        "FINAL_APPROACH_ESTABLISHED",
+        "FLARE",
+        "CONTACT_CANDIDATE"
+      ]
+    }
+  },
+  "notes": "Offline behavioral-cloning baseline only. Inputs must be assembled in exactly `feature_order`, z-scored per `input_normalization` (skip the listed not_zscored_variables), and outputs saturated per `output_saturation` before being sent to the simulator. Real-time telemetry, closed-loop inference, and command transmission are NOT implemented by this package -- see reports/training_report.md for scope."
+}

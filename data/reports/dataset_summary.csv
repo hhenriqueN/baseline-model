@@ -1,0 +1,17 @@
+episode_id,session_id,source_file,scenario_id,eligible_for_training,runway_id,n_samples_raw,duration_s_raw,n_samples_10hz,effective_fs_raw_hz,n_unnormalized,n_baseline_core,n_full_approach,n_recovery_ablation,touchdown_s,complete_s,complete_reason,transient_detected,transient_duration_removed_s,airspeed_kt_before_transient,airspeed_kt_after_transient,flaps_before_transient,flaps_after_transient
+circuito-completo__landing-01,circuito-completo,circuito-completo.csv,circuit,True,2,7842,131.3,1313,60.0,1313,1005,1005,1065,106.52,131.22,end_of_recording_window,True,6.0,97.0,71.9,0.0,0.66
+circuito-completo__landing-02,circuito-completo,circuito-completo.csv,circuit,True,29,8411,140.3,1403,60.0,1403,988,1224,988,419.07,436.87,end_of_recording_window,,,,,,
+turbulencia05,turbulencia05,turbulencia05.csv,turbulence_05,True,2,7146,119.3,1194,60.0,1194,1029,1029,1045,104.52,119.32,end_of_recording_window,True,1.6,82.4,72.7,0.0,0.33
+turbulencia08,turbulencia08,turbulencia08.csv,turbulence_08,True,2,7894,131.8,1318,60.0,1318,998,998,1039,103.92,122.42,groundspeed_below_threshold,True,4.02,82.4,67.0,0.0,0.67
+voo-2-com-16-nos,voo-2-com-16-nos,voo-2-com-16-nos.csv,wind_16kt,True,2,7855,131.3,1314,60.0,1314,1096,1096,1116,107.42,125.22,groundspeed_below_threshold,True,2.0,82.4,75.0,0.33,0.67
+voo-2-com-rajada,voo-2-com-rajada,voo-2-com-rajada.csv,gust,True,2,7957,132.8,1329,60.0,1329,1082,1082,1142,114.22,125.32,groundspeed_below_threshold,True,5.98,82.4,65.3,0.0,0.66
+voo-3-com-16-nos,voo-3-com-16-nos,voo-3-com-16-nos.csv,wind_16kt,True,2,7683,128.3,1283,60.0,1283,1259,1259,1283,,,,True,2.32,82.4,73.8,0.0,0.33
+voo-com-16-nos,voo-com-16-nos,voo-com-16-nos.csv,wind_16kt,True,2,8603,143.6,1437,60.0,1437,1306,1306,1369,136.92,140.72,groundspeed_below_threshold,True,6.22,82.4,71.1,0.0,0.99
+voo-com-8-nos,voo-com-8-nos,voo-com-8-nos.csv,wind_8kt,True,2,6639,111.2,1113,60.0,1113,874,874,948,94.82,107.42,groundspeed_below_threshold,True,7.32,82.4,68.2,0.0,0.99
+voo-com-rajada-vindo-da-direita,voo-com-rajada-vindo-da-direita,voo-com-rajada-vindo-da-direita.csv,gust_direction_variant,True,2,8209,137.1,1371,60.0,1371,1089,1089,1130,113.02,131.82,groundspeed_below_threshold,True,4.08,82.4,73.2,0.0,0.67
+voo-com-rajada,voo-com-rajada,voo-com-rajada.csv,gust,True,2,7119,119.0,1191,60.0,1191,1032,1032,1055,105.52,119.02,end_of_recording_window,True,2.3,82.4,74.6,0.0,0.33
+voo-condicoes-normais,voo-condicoes-normais,voo-condicoes-normais.csv,normal,True,2,7362,122.9,1229,60.0,1229,988,988,1126,94.42,118.12,groundspeed_below_threshold,True,13.73,101.6,75.0,0.0,0.99
+voo-inicio-teste,voo-inicio-teste,voo-inicio-teste.csv,unknown,False,2,15589,261.0,2611,60.0,2611,0,0,0,,,,,,,,,
+voo-normal2,voo-normal2,voo-normal2.csv,normal,True,2,7281,121.8,1218,60.0,1218,844,844,935,93.52,121.72,end_of_recording_window,True,9.1,101.6,75.0,0.0,0.66
+voo-normal3,voo-normal3,voo-normal3.csv,normal,True,2,7459,124.6,1246,60.0,1246,894,894,960,96.02,124.52,end_of_recording_window,True,6.6,101.6,75.0,0.0,0.99
+voo2-com-8-nos,voo2-com-8-nos,voo2-com-8-nos.csv,wind_8kt,True,2,7355,122.8,1228,60.0,1228,1024,1024,1053,105.32,116.82,groundspeed_below_threshold,True,2.82,82.4,74.7,0.0,0.33

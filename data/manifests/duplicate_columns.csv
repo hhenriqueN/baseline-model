@@ -1,0 +1,13 @@
+keep_column,drop_column,confirmed_duplicate,formula,max_abs_error,lag_samples,tolerance_used,note
+/position[0]/altitude-agl-ft[0],/position[0]/altitude-agl-m[0],True,agl_m = agl_ft * 0.3048,0.005051196117449308,1.0,1.0358108312359602,ft->m unit conversion (per-file consensus lag=1; worst file=voo-inicio-teste.csv; lags seen=[1])
+/velocities[0]/vertical-speed-fps[0],/velocities[0]/speed-down-fps[0],True,speed_down_fps = -vertical_speed_fps,0.0,0.0,0.06833991813659668,sign-flipped NED component (per-file consensus lag=0; worst file=circuito-completo.csv; lags seen=[0])
+/velocities[0]/airspeed-kt[0],/fdm[0]/jsbsim[0]/velocities[0]/vias-kts[0],False,vias_kts ~= airspeed_kt (identity check),101.4259109,-2.0,0.09169334694400001,"indicated vs calibrated airspeed (per-file consensus lag=-2; worst file=voo-normal2.csv; lags seen=[-2, 2])"
+/orientation[0]/side-slip-rad[0],/orientation[0]/beta-deg[0],False,beta_deg = degrees(side_slip_rad),89.61818126949612,-2.0,0.0016348562091588975,"deg vs rad sideslip representation (per-file consensus lag=-2; worst file=voo-com-rajada-vindo-da-direita.csv; lags seen=[-2, 2])"
+/controls[0]/engines[0]/engine[0]/throttle[0],/controls[0]/engines[0]/engine[1]/throttle[0],True,engine1_throttle ~= engine0_throttle (identity check),0.0,0.0,0.001,C172P is single-engine; engine[1] may be an unused copy (per-file consensus lag=0; worst file=circuito-completo.csv; lags seen=[0])
+/surface-positions[0]/left-aileron-pos-norm[0],/surface-positions[0]/right-aileron-pos-norm[0],True,identity (byte-exact),0.0,,,exact duplicate values
+/gear[0]/gear[0]/rollspeed-ms[0],/engines[0]/engine[7]/rpm[0],True,identity (byte-exact),0.0,,,exact duplicate values
+/gear[0]/gear[1]/rollspeed-ms[0],/engines[0]/engine[7]/n1[0],True,identity (byte-exact),0.0,,,exact duplicate values
+/gear[0]/gear[2]/rollspeed-ms[0],/engines[0]/engine[7]/n2[0],True,identity (byte-exact),0.0,,,exact duplicate values
+/consumables[0]/fuel[0]/tank[0]/level-gal_us[0],/consumables[0]/fuel[0]/tank[1]/level-gal_us[0],True,identity (byte-exact),0.0,,,exact duplicate values
+/controls[0]/engines[0]/engine[0]/throttle[0],/controls[0]/engines[0]/engine[1]/throttle[0],True,identity (byte-exact),0.0,,,exact duplicate values
+/fdm[0]/jsbsim[0]/contact[0]/unit[4]/z-position[0],/fdm[0]/jsbsim[0]/contact[0]/unit[5]/z-position[0],True,identity (byte-exact),0.0,,,exact duplicate values

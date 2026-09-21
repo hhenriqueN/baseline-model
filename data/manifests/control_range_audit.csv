@@ -1,0 +1,12 @@
+column_name,expected_min,expected_max,observed_min,observed_max,n_below_range,n_above_range
+/controls[0]/flight[0]/aileron[0],-1.0,1.0,-1.0,0.6368544101715088,0,0
+/controls[0]/flight[0]/elevator[0],-1.0,1.0,-1.0,0.3713306188583374,0,0
+/controls[0]/flight[0]/rudder[0],-1.0,1.0,-1.0,1.0,0,0
+/controls[0]/flight[0]/aileron-trim[0],-1.0,1.0,0.0219999998807907,0.022,0,0
+/controls[0]/flight[0]/rudder-trim[0],-1.0,1.0,0.0199999995529651,0.02,0,0
+/controls[0]/flight[0]/elevator-trim[0],-1.0,1.0,-0.1840000003576278,0.1299999952316284,0,0
+/controls[0]/flight[0]/flaps[0],0.0,1.0,0.0,1.0,0,0
+/controls[0]/engines[0]/engine[0]/throttle[0],0.0,1.0,0.0,1.0,0,0
+/controls[0]/engines[0]/engine[1]/throttle[0],0.0,1.0,0.0,1.0,0,0
+/controls[0]/flight[0]/speedbrake[0],0.0,1.0,0.0,0.0,0,0
+/controls[0]/flight[0]/spoilers[0],0.0,1.0,0.0,0.0,0,0

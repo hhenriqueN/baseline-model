@@ -1,0 +1,59 @@
+# SECOND runway configuration — BIKF RWY 29, used ONLY by
+# circuito-completo__landing-02.
+#
+# WHY THIS FILE EXISTS (important, non-obvious finding, 2026-09-17):
+# The task spec assumes a single runway (BIKF "RWY 01", i.e. current apt.dat
+# RWY02/20 — see data/config/runway.yaml) for the whole dataset. While
+# segmenting circuito-completo.csv, the *second* landing's touchdown
+# position and heading do NOT match runway 02/20 at all:
+#   - Aircraft heading during final approach/touchdown/rollout is stable at
+#     ~264-269 deg true, matching RWY29's true heading (~270 deg), not
+#     RWY02/20's (~0/180 deg).
+#   - Touchdown lat/lon (63.98499, -22.60537) is ~634 m from the apt.dat
+#     RWY29 threshold and on the RWY11/29 latitude band, far from RWY02/20's
+#     runway line.
+#   - Computing along/cross-track/heading-error features against RWY02/20
+#     for this episode gives nonsensical values (cross-track in the
+#     thousands of meters, heading error near +-90-180 deg), i.e. it is
+#     describing distance to the WRONG runway, not just noisy data.
+#
+# CONCLUSION: the pilot's second landing of the circuit was flown to BIKF's
+# other runway pair (11/29), landing on 29. This is used ONLY for
+# circuito-completo__landing-02's runway-relative feature computation (the
+# feature *definitions* -- along_track_m, cross_track_error_m, etc. -- are
+# unchanged; only the reference threshold/heading differ per episode). This
+# is recorded as `runway_id: "29"` in data/manifests/episodes.csv.
+#
+# Flagged for human review in cleaning_report.md: we are confident in the
+# geometric evidence (heading + position both independently point to RWY29),
+# but this contradicts the task spec's implicit single-runway assumption, so
+# a person familiar with the pilot's session log should confirm.
+
+runway_id: "29"
+airport_icao: BIKF
+
+# threshold coordinates = apt.dat "29" end of the 11/29 runway pair
+threshold_latitude_deg: 63.98504419
+threshold_longitude_deg: -22.59238152
+# true heading = bearing(11 -> 29) + 180, i.e. the direction flown when
+# landing ON runway 29 (computed from apt.dat threshold coordinates)
+true_heading_deg: 269.965
+threshold_elevation_ft: 150   # EMPIRICAL ESTIMATE ONLY (see note below) — REVIEW NEEDED
+threshold_elevation_ft_note: >
+  apt.dat's older-format runway row (code 100) does not carry a per-threshold
+  elevation; only the airport reference elevation is available (170 ft,
+  row code 1). Estimated instead from telemetry: MSL altitude
+  (/position[0]/altitude-ft[0]) ~154 ft at first stable touchdown (~634 m
+  past the threshold), minus the ~3.5 ft AGL-sensor/gear geometric offset
+  found empirically at ground contact (see cleaning_report.md) => ~150 ft.
+  Treat as provisional; confirm against a real BIKF chart if available.
+runway_length_m: 3053.87   # apt.dat geometric distance between 11 and 29 thresholds
+runway_width_m: 60.05
+glideslope_deg: 3.0
+target_airspeed_kt: 65
+flare_agl_ft: 20
+
+opposite_threshold_latitude_deg: 63.98504094
+opposite_threshold_longitude_deg: -22.65499831
+
+schema_version: 1

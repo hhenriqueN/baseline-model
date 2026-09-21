@@ -1,0 +1,248 @@
+column_name,dtype,unit,min,max,mean,std,n_unique,missing_count,inf_count,is_constant,is_near_constant,duplicate_of,conversion_relation,selected_for_baseline,role,exclusion_reason
+frame,int64,count,0.0,26488.0,5805.897065997073,5579.433189407894,26489,0,0,False,False,,,False,metadata,
+sim_time,float64,s,0.0166666666666666,443.1416666665879,97.24854086199952,93.36316411469242,97476,0,0,False,False,,,False,metadata,
+/position[0]/longitude-deg[0],float64,deg,-22.61235267288132,-22.518814572227775,-22.59947761351606,0.01785703405410786,123753,0,0,False,False,,,False,derived_feature_source,
+/position[0]/latitude-deg[0],float64,deg,63.937623185353154,63.99644680542782,63.9625124693467,0.014935921174157454,125031,0,0,False,False,,,False,derived_feature_source,
+/position[0]/altitude-ft[0],float64,ft,128.6966654606855,1300.5276167658433,482.46280616504674,295.2611274286818,125047,0,0,False,False,,,True,neural_input,
+/position[0]/altitude-agl-ft[0],float64,ft,3.0727984339196155,1300.28302166577,384.949660601492,328.302270452265,125047,0,0,False,False,,,True,neural_input,
+/orientation[0]/roll-deg[0],float64,deg,-30.97850799560547,43.890769958496094,0.24585005173944785,5.270850548119641,124909,0,0,False,False,,,True,neural_input,
+/orientation[0]/pitch-deg[0],float64,deg,-12.622493743896484,21.800273895263672,-0.9886249770659222,4.369884657641475,124822,0,0,False,False,,,True,neural_input,
+/orientation[0]/heading-deg[0],float64,deg,0.0001310517254751,359.9997863769531,219.9354190586222,159.51406625926964,121632,0,0,False,False,,,True,neural_input,
+/orientation[0]/alpha-deg[0],float64,deg,-179.88575744628906,179.90097045898438,-0.5598648212973558,22.254528734660813,124730,0,0,False,False,,,True,neural_input,
+/orientation[0]/side-slip-rad[0],float64,rad,-1.5641323328018188,1.5450412034988403,-0.053029922027091,0.22658466187724663,124963,0,0,False,False,,,True,neural_input,
+/orientation[0]/beta-deg[0],float64,deg,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/orientation[0]/roll-rate-degps[0],float64,deg/s,-182.52593994140625,69.51319885253906,-0.011448310379142153,3.643271887356741,124998,0,0,False,False,,,True,neural_input,
+/orientation[0]/pitch-rate-degps[0],float64,deg/s,-56.93708801269531,102.4234848022461,0.03315059666486209,1.9448453758233186,124997,0,0,False,False,,,True,neural_input,
+/orientation[0]/yaw-rate-degps[0],float64,deg/s,-41.9412727355957,177.4272003173828,0.2258187930327372,5.175008673640328,124987,0,0,False,False,,,True,neural_input,
+/velocities[0]/mach[0],float64,,0.0023509454913437,0.155909076,0.09546960384482997,0.027496608639139324,123925,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/velocities[0]/airspeed-kt[0],float64,kt,1.5521408319473269,101.6468887,62.580608957060306,17.915429036441274,123438,0,0,False,False,,,True,neural_input,
+/velocities[0]/vertical-speed-fps[0],float64,ft/s,-26.929288864135746,41.41062927246094,-4.390544856513608,6.948535302954053,124877,0,0,False,False,,,True,neural_input,
+/velocities[0]/speed-north-fps[0],float64,ft/s,-126.08019256591795,169.5801239,90.70776827878113,51.42265559055949,124381,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/velocities[0]/speed-east-fps[0],float64,ft/s,-134.8832550048828,147.50889587402344,-0.5337188987781954,40.92469841179989,124988,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/velocities[0]/speed-down-fps[0],float64,ft/s,-41.41062927246094,26.929288864135746,4.390544856513608,6.948535302954053,124877,0,0,False,False,/velocities[0]/vertical-speed-fps[0],speed_down_fps = -vertical_speed_fps,False,excluded,duplicate_unit_or_exact
+/velocities[0]/vBody-fps[0],float64,ft/s,-55.30772018432617,50.61650848388672,6.935764511445123,11.343154493956911,124933,0,0,False,False,,,True,neural_input,
+/velocities[0]/uBody-fps[0],float64,ft/s,-31.411550521850582,170.2410430908203,106.48536977923195,32.93160341245238,124195,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/velocities[0]/wBody-fps[0],float64,ft/s,-13.859576225280762,31.23529052734375,1.5065057152522643,3.488897667159167,124965,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/accelerations[0]/pilot[0]/x-accel-fps_sec[0],float64,ft/s,-82.17086791992188,323.793701171875,-1.3431466192681716,3.0995226741482163,124862,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/accelerations[0]/pilot[0]/y-accel-fps_sec[0],float64,ft/s,-171.4245147705078,241.92051696777344,0.07849046860599589,2.5379371057470457,124995,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/accelerations[0]/pilot[0]/z-accel-fps_sec[0],float64,ft/s,-559.7720947265625,15.075770378112791,-32.246307175633014,3.873399513790759,120292,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/instrumentation[0]/slip-skid-ball[0]/indicated-slip-skid[0],float64,,-5.822944641113281,7.331763744354248,0.033163437435013744,0.5515305252021554,62470,0,0,False,False,,,False,qa_only,
+/position[0]/ground-elev-m[0],float64,m,-0.0758406966924667,46.60757827758789,29.491718428228804,11.301143264046559,121463,0,0,False,False,,,False,qa_only,
+/controls[0]/flight[0]/aileron[0],float64,,-1.0,0.6368544101715088,-0.003147889390755681,0.08211165981278173,751,0,0,False,False,,,True,label,
+/controls[0]/flight[0]/elevator[0],float64,,-0.6879112124443054,0.3252488672733307,0.0006876372668638765,0.0688935413230136,568,0,0,False,False,,,True,label,
+/controls[0]/flight[0]/rudder[0],float64,,-1.0,1.0,0.04083796935467863,0.1615159177352687,220,0,0,False,False,,,True,label,
+/controls[0]/flight[0]/aileron-trim[0],float64,,0.0219999998807907,0.022,0.021999999894518018,3.80525378488886e-11,2,0,0,False,True,,,False,qa_only,
+/controls[0]/flight[0]/elevator-trim[0],float64,,-0.0299999993294477,0.1299999952316284,0.04292194428243291,0.039210016824431176,271,0,0,False,False,,,False,derived_feature_source,
+/controls[0]/flight[0]/rudder-trim[0],float64,,0.0199999995529651,0.02,0.019999999604442525,1.4269702328940486e-10,2,0,0,False,True,,,False,qa_only,
+/controls[0]/flight[0]/flaps[0],float64,,0.0,1.0,0.8187994512845407,0.296754374730295,14,0,0,False,False,,,True,neural_input,
+/controls[0]/flight[0]/speedbrake[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/flight[0]/spoilers[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/gear[0]/brake-left[0],float64,,0.0,1.0,0.03404813599473321,0.1699517065523409,950,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/controls[0]/gear[0]/brake-right[0],float64,,0.0,1.0,0.03419909505049501,0.16969584222741743,917,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/controls[0]/gear[0]/copilot-brake-left[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/gear[0]/copilot-brake-right[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/gear[0]/brake-parking[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/environment[0]/wind-speed-kt[0],float64,kt,3.0401904582977295,19.78107261657715,8.784783422420206,6.029486246835304,43109,0,0,False,False,,,False,qa_only,
+/environment[0]/wind-from-heading-deg[0],float64,deg,150.0,299.18426513671875,209.40108529386845,60.41823491054706,10175,0,0,False,False,,,False,qa_only,
+/environment[0]/turbulence[0]/magnitude-norm[0],float64,norm[0..1 or -1..1],0.0,0.6399999856948853,0.00010901568014212568,0.0072731390368027705,141,0,0,False,False,,,False,qa_only,
+/environment[0]/temperature-degc[0],float64,,13.41342830657959,20.081830978393555,19.371325117311716,0.6359532641802514,105939,0,0,False,False,,,False,qa_only,
+/environment[0]/pressure-sea-level-inhg[0],float64,,29.91665267944336,29.969640731811523,29.943583236166706,0.026485157473893153,49,0,0,False,False,,,False,qa_only,
+/environment[0]/magnetic-variation-deg[0],float64,deg,-9.792181015014648,-9.743820190429688,-9.778340932619345,0.007847304439683324,36157,0,0,False,False,,,False,qa_only,
+/environment[0]/visibility-m[0],float64,m,16093.4404296875,119999.1563,67781.63744266957,50131.48614361077,487,0,0,False,False,,,False,qa_only,
+/surface-positions[0]/elevator-pos-norm[0],float64,norm[0..1 or -1..1],-0.6027974486351013,0.2951931655406952,0.043600972891623166,0.05947777279364927,4499,0,0,False,False,,,False,qa_only,
+/surface-positions[0]/flap-pos-norm[0],float64,norm[0..1 or -1..1],0.0,1.0,0.8119211822998826,0.30270843894480143,1808,0,0,False,False,,,False,qa_only,
+/surface-positions[0]/left-aileron-pos-norm[0],float64,norm[0..1 or -1..1],-0.9778155088424684,0.6587300896644592,0.018848336327371325,0.08209695043928411,754,0,0,False,False,,,False,qa_only,
+/surface-positions[0]/right-aileron-pos-norm[0],float64,norm[0..1 or -1..1],-0.9778155088424684,0.6587300896644592,0.018848336327371325,0.08209695043928411,754,0,0,False,False,/surface-positions[0]/left-aileron-pos-norm[0],identity (byte-exact),False,excluded,duplicate_unit_or_exact
+/surface-positions[0]/rudder-pos-norm[0],float64,norm[0..1 or -1..1],-0.9798151254653932,0.999811351299286,0.06081043790334047,0.16139174486077595,220,0,0,False,False,,,False,qa_only,
+/sim[0]/model[0]/c172p[0]/cockpit[0]/yoke-aileron[0],float64,,-1.0,0.6368544101715088,-0.0031481074109343077,0.08211244066553494,754,0,0,False,False,,,False,qa_only,
+/sim[0]/model[0]/c172p[0]/cockpit[0]/yoke-elevator[0],float64,,-0.6029111742973328,0.2952488660812378,0.04360919953699445,0.059488995132000864,4498,0,0,False,False,,,False,qa_only,
+/sim[0]/model[0]/c172p[0]/cockpit[0]/pedals-rudder[0],float64,,-1.0,0.9800000190734864,-0.06082191201324949,0.1614221966282231,219,0,0,False,False,,,False,qa_only,
+/sim[0]/model[0]/c172p[0]/cockpit[0]/flaps-lever[0],float64,,0.0,1.0,0.8199048402141532,0.29398513170710566,682,0,0,False,False,,,False,qa_only,
+/sim[0]/model[0]/c172p[0]/cockpit[0]/parking-lever[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/gear[0]/gear[0]/steering-norm[0],float64,norm[0..1 or -1..1],-0.3333333432674408,0.3333333432674408,0.0029639013442855355,0.032405118979074415,774,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/gear[0]/gear[1]/steering-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/gear[0]/gear[2]/steering-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/gear[0]/gear[0]/compression-norm[0],float64,norm[0..1 or -1..1],0.0,0.3138852715492248,0.015902503628083608,0.04131879134638408,22177,0,0,False,False,,,False,flight_manager_only,
+/gear[0]/gear[1]/compression-norm[0],float64,norm[0..1 or -1..1],0.0,0.3267002701759338,0.008358495167421797,0.02580241626975346,16421,0,0,False,False,,,False,flight_manager_only,
+/gear[0]/gear[2]/compression-norm[0],float64,norm[0..1 or -1..1],0.0,0.3058469891548157,0.012799659584284953,0.033352807027247716,21534,0,0,False,False,,,False,flight_manager_only,
+/gear[0]/gear[0]/rollspeed-ms[0],float64,m/s,-7.988345146179199,35.71944046020508,3.188191987305365,7.605102941682283,25263,0,0,False,False,,,False,flight_manager_only,
+/gear[0]/gear[1]/rollspeed-ms[0],float64,m/s,-7.943906307220459,36.14152145385742,2.3661775666353013,6.562047922849327,19788,0,0,False,False,,,False,flight_manager_only,
+/gear[0]/gear[2]/rollspeed-ms[0],float64,m/s,-8.150607109069824,34.12238311767578,2.8919799865016236,7.145762444102104,23916,0,0,False,False,,,False,flight_manager_only,
+/consumables[0]/fuel[0]/tank[0]/level-gal_us[0],float64,,5.050526142120361,5.374722958,5.309286989635171,0.0807671093833741,2749,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/consumables[0]/fuel[0]/tank[1]/level-gal_us[0],float64,,5.050526142120361,5.374722958,5.309286989635171,0.0807671093833741,2749,0,0,False,False,/consumables[0]/fuel[0]/tank[0]/level-gal_us[0],identity (byte-exact),False,excluded,duplicate_unit_or_exact
+/consumables[0]/fuel[0]/tank[2]/level-gal_us[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/engines[0]/engine[0]/throttle[0],float64,,0.0,1.0,0.4620222700474685,0.27509237606873094,259,0,0,False,False,,,True,label,
+/controls[0]/engines[0]/engine[1]/throttle[0],float64,,0.0,1.0,0.4620222700474685,0.27509237606873094,259,0,0,False,False,/controls[0]/engines[0]/engine[0]/throttle[0],identity (byte-exact),False,excluded,duplicate_unit_or_exact
+/controls[0]/engines[0]/current-engine[0]/mixture[0],float64,,0.814183235,0.814183235168457,0.8141832351490588,5.3777482942303114e-11,2,0,0,False,True,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/engines[0]/active-engine[0]/rpm[0],float64,,0.0081969397142529,2550.64306640625,1363.382655549153,495.952315850546,124213,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/engines[0]/active-engine[0]/mp-osi[0],float64,,4.789791107177734,29.53933334350586,12.941461629166698,5.588306722589232,123471,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/engines[0]/active-engine[0]/egt-norm[0],float64,norm[0..1 or -1..1],0.0,0.2646546363830566,0.21363645447159146,0.08301445216698046,105516,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/engines[0]/active-engine[0]/oil-temperature-degf[0],float64,,0.0,157.88455200195312,88.56769794155828,25.61617780136439,123006,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/engines[0]/active-engine[0]/oil-pressure-psi[0],float64,,0.0,77.78858947753906,65.79095447448766,12.840434499178247,121969,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/fdm[0]/jsbsim[0]/fcs[0]/steer-pos-deg[0],float64,deg,-10.0,10.0,0.08891703946560287,0.9721535528206854,776,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/gear[0]/gear[19]/compression-norm[0],float64,norm[0..1 or -1..1],0.0,0.0894680470228195,1.742611602969348e-05,0.001186581291740481,30,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/gear[0]/gear[19]/position-norm[0],float64,norm[0..1 or -1..1],1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/gear[0]/gear[19]/rollspeed-ms[0],float64,m/s,0.0,7.267855167388916,0.004613341498676749,0.12556797729483246,110,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/gear[0]/gear[20]/compression-norm[0],float64,norm[0..1 or -1..1],0.0,0.2130615413188934,0.0002836747483152844,0.0026451380006374953,1742,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/gear[0]/gear[20]/position-norm[0],float64,norm[0..1 or -1..1],1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/gear[0]/gear[20]/rollspeed-ms[0],float64,m/s,-8.392499923706055,22.00946807861328,0.27263302411922535,2.1664585397400735,2511,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/gear[0]/gear[21]/compression-norm[0],float64,norm[0..1 or -1..1],0.0,0.0499934591352939,2.053172587761667e-05,0.0008035753752404201,104,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/gear[0]/gear[21]/position-norm[0],float64,norm[0..1 or -1..1],1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/gear[0]/gear[21]/rollspeed-ms[0],float64,m/s,-8.255352973937988,0.0786837413907051,-0.0018033650120799778,0.10930571974229748,104,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/gear[0]/gear[22]/compression-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/gear[0]/gear[22]/position-norm[0],float64,norm[0..1 or -1..1],1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/gear[0]/gear[22]/rollspeed-ms[0],float64,m/s,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/gear[0]/water-rudder-down-actual[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/engines[0]/engine[7]/rpm[0],float64,,-7.988345146179199,35.71944046020508,3.188191987305365,7.605102941682283,25263,0,0,False,False,/gear[0]/gear[0]/rollspeed-ms[0],identity (byte-exact),False,excluded,duplicate_unit_or_exact
+/engines[0]/engine[7]/n1[0],float64,,-7.943906307220459,36.14152145385742,2.3661775666353013,6.562047922849327,19788,0,0,False,False,/gear[0]/gear[1]/rollspeed-ms[0],identity (byte-exact),False,excluded,duplicate_unit_or_exact
+/engines[0]/engine[7]/n2[0],float64,,-8.150607109069824,34.12238311767578,2.8919799865016236,7.145762444102104,23916,0,0,False,False,/gear[0]/gear[2]/rollspeed-ms[0],identity (byte-exact),False,excluded,duplicate_unit_or_exact
+/rotors[0]/main[0]/blade[0]/position-deg[0],float64,deg,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/rotors[0]/main[0]/blade[1]/position-deg[0],float64,deg,-8.278241157531738,0.1499409675598144,-0.004014262989358676,0.16443009881580278,414,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/rotors[0]/main[0]/blade[2]/position-deg[0],float64,deg,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/ski[0]/atan-actual[0],float64,,-1.2132729291915894,0.9669589400291444,0.20056941602007622,0.34236585277911374,123617,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/fdm[0]/jsbsim[0]/gear[0]/unit[23]/z-position[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/gear[0]/unit[24]/z-position[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/gear[0]/unit[25]/z-position[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/contact[0]/unit[4]/z-position[0],float64,,-10.0,50.0,47.40761769198167,12.199331233907687,2,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/fdm[0]/jsbsim[0]/contact[0]/unit[5]/z-position[0],float64,,-10.0,50.0,47.40761769198167,12.199331233907687,2,0,0,False,False,/fdm[0]/jsbsim[0]/contact[0]/unit[4]/z-position[0],identity (byte-exact),False,excluded,duplicate_unit_or_exact
+/fdm[0]/jsbsim[0]/wing-damage[0]/left-wing[0],float64,,0.0,1.0,0.0029108123885454736,0.05387358136619332,2,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/fdm[0]/jsbsim[0]/wing-damage[0]/right-wing[0],float64,,0.0,1.0,0.00930820225348058,0.09602933597221651,2,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/velocities[0]/groundspeed-kt[0],float64,kt,2.225390198873356e-05,100.86271667480467,63.51499754790706,19.245902267819773,123695,0,0,False,False,,,False,flight_manager_only,
+/environment[0]/aircraft-effects[0]/fog-level[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/environment[0]/aircraft-effects[0]/frost-level[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/ground[0]/nose-gear-ground-effect-speed-kt-actual[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/ground[0]/left-gear-ground-effect-speed-kt-actual[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/ground[0]/right-gear-ground-effect-speed-kt-actual[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/ground[0]/left-wing-ground-effect-speed-kt-actual[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/ground[0]/right-wing-ground-effect-speed-kt-actual[0],float64,,0.0,43.17881393432617,0.0006471559432852959,0.16218521600344527,3,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/fdm[0]/jsbsim[0]/ground[0]/tail-ground-effect-speed-kt-actual[0],float64,,0.0,19.165945053100582,0.011159879078419645,0.36770243051216184,406,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/fdm[0]/jsbsim[0]/ground[0]/nose-tyre-smoke-ground-effect-speed-kt-actual[0],float64,,0.0,1.0,0.0004558140278766263,0.021345020609968318,2,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/fdm[0]/jsbsim[0]/ground[0]/left-tyre-smoke-ground-effect-speed-kt-actual[0],float64,,0.0,1.0,3.9983686655844414e-05,0.006323164373120106,2,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/fdm[0]/jsbsim[0]/ground[0]/right-tyre-smoke-ground-effect-speed-kt-actual[0],float64,,0.0,1.0,3.9983686655844414e-05,0.00632316437312979,2,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/fdm[0]/jsbsim[0]/hydro[0]/left-ground-effect-speed-kt-actual[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/hydro[0]/right-ground-effect-speed-kt-actual[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/hydro[0]/spray-wake-speed-kt-actual[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/position[0]/altitude-agl-m[0],float64,m,0.9365889430046082,396.3262634277344,117.3572614837056,100.06495088978377,123582,0,0,False,False,/position[0]/altitude-agl-ft[0],agl_m = agl_ft * 0.3048,False,excluded,duplicate_unit_or_exact
+/systems[0]/vacuum[0]/suction-inhg[0],float64,,-109901.5859375,5.036794662475586,-27.480493956639837,1723.713183307997,119361,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/systems[0]/static[0]/pressure-inhg[0],float64,,28.61235809326172,29.83301544189453,29.43596295055489,0.30713383856030885,101829,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/systems[0]/pitot[0]/measured-total-pressure-inhg[0],float64,,28.84534072875977,30.148183822631836,29.63786229081876,0.2662141629335097,108812,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/systems[0]/electrical[0]/battery-charge-percent[0],float64,,0.2648368775844574,0.33484947681427,0.29324067065110276,0.015871991307713818,121271,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/fdm[0]/jsbsim[0]/velocities[0]/vias-kts[0],float64,,0.0,99.28889465332033,60.77838881092054,20.54319509408537,121269,0,0,False,False,,,False,qa_only,
+/instrumentation[0]/attitude-indicator[0]/spin[0],float64,,0.0,1.0,0.9689589107173909,0.1296325253745185,22347,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/instrumentation[0]/attitude-indicator[0]/horizon-offset-deg[0],float64,deg,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/instrumentation[0]/heading-indicator[0]/spin[0],float64,,0.0,1.0,0.9756990952577096,0.12568061443805642,8672,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/instrumentation[0]/heading-indicator[0]/offset-deg[0],float64,deg,-125.50994873046876,10.76057243347168,8.959479647730303,9.332002534547394,24882,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/autopilot[0]/settings[0]/heading-bug-deg[0],float64,deg,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/instrumentation[0]/magnetic-compass[0]/indicated-heading-deg[0],float64,deg,0.0005043952260166,359.9996643066406,121.11571702141208,145.06189010549917,124536,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/instrumentation[0]/altimeter[0]/setting-inhg[0],float64,,29.91665267944336,29.969640731811523,29.94349480101087,0.02649184512321213,4,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/instrumentation[0]/nav[0]/radials[0]/selected-deg[0],float64,deg,284.0,284.0,284.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/instrumentation[0]/nav[1]/radials[0]/selected-deg[0],float64,deg,326.0,326.0,326.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/instrumentation[0]/adf[0]/rotation-deg[0],float64,deg,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/engines[0]/engine[0]/egt-bug-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/sounds[0]/stall-horn-volume-actual[0],float64,,0.0,1.0,0.010035590099962344,0.09594000361499304,467,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/fdm[0]/jsbsim[0]/sounds[0]/stall-horn-pitch-actual[0],float64,,0.899999976,1.100000023841858,0.9022315434574975,0.020928084068801357,9,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/environment[0]/aircraft-effects[0]/cabin-heat-set[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/environment[0]/aircraft-effects[0]/cabin-air-set[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/inertia[0]/pointmass-weight-lbs[0],float64,,170.0,170.0,170.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/inertia[0]/pointmass-weight-lbs[1],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/inertia[0]/pointmass-weight-lbs[2],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/inertia[0]/pointmass-weight-lbs[3],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/inertia[0]/pointmass-weight-lbs[4],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/instruments-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/radio-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/dome-white-norm[0],float64,norm[0..1 or -1..1],1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/gps-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/switches[0]/stby-batt[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/batt-test-lamp-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/avionics-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/pedestal-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/swcb-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/stby-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/domeL-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/domeR-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/instrumentation[0]/FG1000[0]/Lightmap[0],float64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/sim[0]/model[0]/door-positions[0]/rightDoor[0]/position-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/sim[0]/model[0]/door-positions[0]/leftDoor[0]/position-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/sim[0]/model[0]/door-positions[0]/baggageDoor[0]/position-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/sim[0]/model[0]/door-positions[0]/leftWindow[0]/position-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/sim[0]/model[0]/door-positions[0]/rightWindow[0]/position-norm[0],float64,norm[0..1 or -1..1],0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/engines[0]/active-engine[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/fuel[0]/tank[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/pontoon-damage[0]/left-pontoon[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/pontoon-damage[0]/right-pontoon[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/bushkit[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/switches[0]/magnetos[0],int64,,3.0,3.0,3.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/sim[0]/alarms[0]/stall-warning[0],int64,,0.0,1.0,0.007724848261909141,0.08755133510194697,2,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/controls[0]/gear[0]/gear-down[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,flight_manager_only,
+/controls[0]/switches[0]/master-avionics[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/hazards[0]/icing[0]/wing[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/gear[0]/gear[0]/wow[0],int64,,0.0,1.0,0.17747159159063103,0.382068832941871,2,0,0,False,False,,,False,flight_manager_only,
+/gear[0]/gear[1]/wow[0],int64,,0.0,1.0,0.13143437477509176,0.33787615010878397,2,0,0,False,False,,,False,flight_manager_only,
+/gear[0]/gear[2]/wow[0],int64,,0.0,1.0,0.1724176535973323,0.3777445530873866,2,0,0,False,False,,,False,flight_manager_only,
+/controls[0]/flight[0]/flaps-serviceable[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/engines[0]/engine[0]/faults[0]/serviceable[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/engines[0]/engine[0]/faults[0]/left-magneto-serviceable[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/engines[0]/engine[0]/faults[0]/right-magneto-serviceable[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/engines[0]/engine[0]/faults[0]/spark-plugs-serviceable[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/engines[0]/engine[0]/faults[0]/oil-pressure-status[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/engines[0]/engine[0]/faults[0]/fuel-pump-serviceable[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/fuel[0]/tank[0]/fuel_selector[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/fuel[0]/tank[1]/fuel_selector[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/fuel[0]/tank[2]/fuel_selector[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/engines[0]/active-engine[0]/exhaust[0],int64,,0.0,1.0,0.028988172825487202,0.16777390665576533,2,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/engines[0]/active-engine[0]/cranking[0],int64,,0.0,1.0,0.029036153249474214,0.1679085480499191,2,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/engines[0]/active-engine[0]/running[0],int64,,0.0,1.0,0.9398005613709607,0.2378569289312228,2,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/engines[0]/active-engine[0]/crash-engine[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/engines[0]/active-engine[0]/kill-engine[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/engines[0]/active-engine[0]/killed[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/engines[0]/active-engine[0]/crashed[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/engines[0]/active-engine[0]/coughing[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/engines[0]/current-engine[0]/carb-heat[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/gear[0]/unit[23]/WOW[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/gear[0]/unit[24]/WOW[0],int64,,0.0,1.0,0.003302652517772749,0.05737396036127975,2,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/fdm[0]/jsbsim[0]/gear[0]/unit[25]/WOW[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/gear[0]/unit[0]/broken[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/gear[0]/unit[1]/broken[0],int64,,0.0,1.0,0.007141086436733813,0.08420301668770187,2,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/fdm[0]/jsbsim[0]/gear[0]/unit[2]/broken[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/crash[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/contact[0]/unit[3]/WOW[0],int64,,0.0,1.0,0.0032386786191233976,0.05681738638054455,2,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/fdm[0]/jsbsim[0]/contact[0]/unit[6]/WOW[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/fdm[0]/jsbsim[0]/contact[0]/unit[7]/WOW[0],int64,,0.0,1.0,0.007109099487409137,0.08401557378132314,2,0,0,False,False,,,False,excluded,not_in_v1_feature_schema_sections14_15
+/fdm[0]/jsbsim[0]/contact[0]/unit[8]/WOW[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/sim[0]/model[0]/c172p[0]/cabin-air-temp-in-range[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/sim[0]/model[0]/c172p[0]/fog-or-frost-increasing[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/panel[0]/glass[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/panel[0]/kap140[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/instrumentation[0]/attitude-indicator[0]/caged-flag[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/engines[0]/engine[0]/primer-lever[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/switches[0]/starter[0],int64,,0.0,1.0,0.029236071682753436,0.1684682485071932,2,0,0,False,False,,,False,excluded,forbidden_input_family_section10
+/controls[0]/switches[0]/master-bat[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/switches[0]/master-alt[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/switches[0]/dome-white[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/switches[0]/dome-red[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/anti-ice[0]/pitot-heat[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/consumables[0]/fuel[0]/tank[0]/selected[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/consumables[0]/fuel[0]/tank[1]/selected[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/consumables[0]/fuel[0]/tank[2]/selected[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/consumables[0]/fuel[0]/tank[3]/selected[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/nav-lights[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/beacon[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/strobe[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/landing-lights[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/lighting[0]/taxi-light[0],int64,,0.0,0.0,0.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/autopilot[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/bcnlt[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/flaps[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/instr[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/intlt[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/landing[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/master[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/navlt[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/pitot-heat[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/radio1[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/radio2[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/radio3[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/radio4[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/radio5[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/strobe[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p
+/controls[0]/circuit-breakers[0]/turn-coordinator[0],int64,,1.0,1.0,1.0,0.0,1,0,0,True,False,,,False,excluded,constant_or_not_applicable_to_c172p

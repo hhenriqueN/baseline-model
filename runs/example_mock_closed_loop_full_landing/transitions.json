@@ -1,0 +1,26 @@
+[
+  {
+    "t": 112.2999999999979,
+    "previous_state": "FINAL_APPROACH_ESTABLISHED",
+    "new_state": "FLARE",
+    "reason": "agl_ft=19.6<=flare_agl_ft=20"
+  },
+  {
+    "t": 118.99999999999751,
+    "previous_state": "FLARE",
+    "new_state": "CONTACT_CANDIDATE",
+    "reason": "first_main_gear_contact"
+  },
+  {
+    "t": 119.09999999999751,
+    "previous_state": "CONTACT_CANDIDATE",
+    "new_state": "TOUCHDOWN_CONFIRMED",
+    "reason": "both_main_gear_contact_for_3_consecutive_samples"
+  },
+  {
+    "t": 119.59999999999748,
+    "previous_state": "TOUCHDOWN_CONFIRMED",
+    "new_state": "ROLLOUT",
+    "reason": "any_gear_contact_for_8_consecutive_samples"
+  }
+]

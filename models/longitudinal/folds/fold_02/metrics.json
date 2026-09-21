@@ -1,0 +1,158 @@
+{
+  "global": {
+    "per_output": {
+      "elevator_effective": {
+        "mse": 0.0006063628243282437,
+        "rmse": 0.024624435231089592,
+        "mae": 0.013224232941865921,
+        "r2": 0.8540953397750854,
+        "pearson_r": 0.9338726314305847,
+        "max_abs_error": 0.18407350778579712,
+        "p95_abs_error": 0.041336771100759506,
+        "saturation_rate_after_clip": 0.0,
+        "mse_after_saturation": 0.0006063628243282437,
+        "n": 998,
+        "command_rate_mae": 0.00495446752756834
+      },
+      "throttle_command": {
+        "mse": 0.01799720898270607,
+        "rmse": 0.13415367901325226,
+        "mae": 0.09919083118438721,
+        "r2": 0.6725949048995972,
+        "pearson_r": 0.8404206784953677,
+        "max_abs_error": 0.3735826015472412,
+        "p95_abs_error": 0.3119840621948242,
+        "saturation_rate_after_clip": 0.0,
+        "mse_after_saturation": 0.01799720898270607,
+        "n": 998,
+        "command_rate_mae": 0.005702334456145763
+      }
+    }
+  },
+  "per_episode": {
+    "turbulencia08": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.0006063628243282437,
+          "rmse": 0.024624435231089592,
+          "mae": 0.013224232941865921,
+          "r2": 0.8540953397750854,
+          "pearson_r": 0.9338726314305847,
+          "max_abs_error": 0.18407350778579712,
+          "p95_abs_error": 0.041336771100759506,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.0006063628243282437,
+          "n": 998,
+          "command_rate_mae": 0.00495446752756834
+        },
+        "throttle_command": {
+          "mse": 0.01799720898270607,
+          "rmse": 0.13415367901325226,
+          "mae": 0.09919083118438721,
+          "r2": 0.6725949048995972,
+          "pearson_r": 0.8404206784953677,
+          "max_abs_error": 0.3735826015472412,
+          "p95_abs_error": 0.3119840621948242,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.01799720898270607,
+          "n": 998,
+          "command_rate_mae": 0.005702334456145763
+        }
+      }
+    }
+  },
+  "per_phase": {
+    "FINAL_APPROACH_ESTABLISHED": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.0001661362184677273,
+          "rmse": 0.012889384292066097,
+          "mae": 0.00936970580369234,
+          "r2": 0.815044641494751,
+          "pearson_r": 0.9096907640708731,
+          "max_abs_error": 0.06468943506479263,
+          "p95_abs_error": 0.02681259624660015,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.0001661362184677273,
+          "n": 897,
+          "command_rate_mae": 0.0032529421150684357
+        },
+        "throttle_command": {
+          "mse": 0.019776836037635803,
+          "rmse": 0.14063014090061188,
+          "mae": 0.10594699531793594,
+          "r2": 0.6417709589004517,
+          "pearson_r": 0.8230175844493666,
+          "max_abs_error": 0.3735826015472412,
+          "p95_abs_error": 0.31656813621520996,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.019776836037635803,
+          "n": 897,
+          "command_rate_mae": 0.005674697924405336
+        }
+      }
+    },
+    "FLARE": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.00451609818264842,
+          "rmse": 0.06720191985368729,
+          "mae": 0.047457024455070496,
+          "r2": 0.3717750310897827,
+          "pearson_r": 0.7120755493277936,
+          "max_abs_error": 0.18407350778579712,
+          "p95_abs_error": 0.14864136278629303,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.00451609818264842,
+          "n": 101,
+          "command_rate_mae": 0.020226292312145233
+        },
+        "throttle_command": {
+          "mse": 0.0021919989958405495,
+          "rmse": 0.04681878909468651,
+          "mae": 0.03918808698654175,
+          "r2": NaN,
+          "pearson_r": NaN,
+          "max_abs_error": 0.08943754434585571,
+          "p95_abs_error": 0.08431729674339294,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.0021919989958405495,
+          "n": 101,
+          "command_rate_mae": 0.005955046508461237
+        }
+      }
+    }
+  },
+  "per_scenario": {
+    "turbulence_08": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.0006063628243282437,
+          "rmse": 0.024624435231089592,
+          "mae": 0.013224232941865921,
+          "r2": 0.8540953397750854,
+          "pearson_r": 0.9338726314305847,
+          "max_abs_error": 0.18407350778579712,
+          "p95_abs_error": 0.041336771100759506,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.0006063628243282437,
+          "n": 998,
+          "command_rate_mae": 0.00495446752756834
+        },
+        "throttle_command": {
+          "mse": 0.01799720898270607,
+          "rmse": 0.13415367901325226,
+          "mae": 0.09919083118438721,
+          "r2": 0.6725949048995972,
+          "pearson_r": 0.8404206784953677,
+          "max_abs_error": 0.3735826015472412,
+          "p95_abs_error": 0.3119840621948242,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.01799720898270607,
+          "n": 998,
+          "command_rate_mae": 0.005702334456145763
+        }
+      }
+    }
+  }
+}

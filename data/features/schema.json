@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "lateral_feature_order": [
+    "along_track_m",
+    "cross_track_error_m",
+    "heading_error_sin",
+    "heading_error_cos",
+    "agl_ft",
+    "roll_deg",
+    "sideslip_rad",
+    "roll_rate_degps",
+    "yaw_rate_degps",
+    "airspeed_kt",
+    "lateral_body_speed_fps"
+  ],
+  "lateral_label_order": [
+    "aileron_command",
+    "rudder_command"
+  ],
+  "longitudinal_feature_order": [
+    "along_track_m",
+    "glideslope_error_deg",
+    "height_above_threshold_ft",
+    "agl_ft",
+    "pitch_deg",
+    "alpha_deg",
+    "pitch_rate_degps",
+    "airspeed_kt",
+    "airspeed_error_kt",
+    "vertical_speed_fps",
+    "flaps_state_norm",
+    "flare_flag"
+  ],
+  "longitudinal_label_order": [
+    "elevator_effective",
+    "throttle_command"
+  ],
+  "column_prefixes": {
+    "lat__": "lateral feature",
+    "laty__": "lateral label",
+    "lon__": "longitudinal feature",
+    "lony__": "longitudinal label"
+  }
+}

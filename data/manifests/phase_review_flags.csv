@@ -1,0 +1,4 @@
+episode_id,flag
+voo-3-com-16-nos,"long_unconfirmed_CONTACT_CANDIDATE_interval: t=[117.92,120.32]s duration=2.50s (>= diagnostic threshold 2.0s)"
+voo-3-com-16-nos,"long_unconfirmed_CONTACT_CANDIDATE_interval: t=[122.82,128.22]s duration=5.50s (>= diagnostic threshold 2.0s)"
+voo-3-com-16-nos,touchdown_never_confirmed: both main gear were never simultaneously in contact for >=3 consecutive samples (>=0.3s) anywhere in the window. ROLLOUT/COMPLETE could not be determined for this episode (excluded from any rollout/complete-dependent use); FLARE/CONTACT_CANDIDATE rows remain valid for training. Manual review required -- do not force a proxy touchdown criterion.

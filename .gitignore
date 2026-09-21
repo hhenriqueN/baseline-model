@@ -1,0 +1,21 @@
+# OS / editor
+.DS_Store
+~$*
+
+# Python
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+
+# Reference documents (copyrighted paper / course template) - kept locally only
+*.pdf
+*.docx
+
+# Derived datasets - fully regenerable from data/raw/ with scripts/01..11
+data/validated/
+data/processed/
+data/splits/
+data/features/*
+!data/features/schema.json

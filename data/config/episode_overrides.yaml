@@ -1,0 +1,47 @@
+circuito-completo:
+  source_file: circuito-completo.csv
+  session_id: circuito-completo
+  airborne_gap_used_to_split:
+    start_idx: 8284
+    end_idx: 23984
+    t_start_s: 138.68333333333692
+    t_end_s: 401.34999999995904
+    duration_s: 262.6666666666221
+  landing_01:
+    episode_id: circuito-completo__landing-01
+    runway_id: '02'
+    start_idx: 0
+    start_t_s: 0.0166666666666666
+    contact_candidate_idx: 6216
+    touchdown_confirmed_idx: 6348
+    rollout_idx: 6348
+    complete_idx: 7841
+    complete_reason: liftoff_after_rollout_touch_and_go
+    end_t_s: 131.29999999999785
+    note: Standardized ~3km/800ft start, same family as the 13 straight-landing files;
+      touch-and-go (COMPLETE detected via liftoff, not low groundspeed).
+  landing_02:
+    episode_id: circuito-completo__landing-02
+    runway_id: '29'
+    runway_id_note: CONFIRMED via touchdown heading (~264-269 deg, matches RWY29 true
+      heading ~270 deg) and touchdown lat/lon (~634m from apt.dat RWY29 threshold,
+      on the 11/29 latitude band) -- see data/config/runway_29.yaml for full evidence.
+      This differs from RWY02/20 used by every other episode. Flagged for human review
+      despite strong geometric evidence.
+    full_episode_start_idx: 23984
+    approach_maneuvering_start_idx: 17706
+    approach_maneuvering_detection: auto_detected
+    final_approach_established_idx: 19122
+    final_approach_established_detection: auto_detected
+    flare_idx: 24290
+    contact_candidate_idx: 24817
+    touchdown_confirmed_idx: 25043
+    rollout_idx: 25043
+    complete_idx: 26116
+    complete_reason: groundspeed_below_threshold
+    end_t_s: 436.9416666665935
+    note: full_approach = [approach_maneuvering_start_idx, complete_idx]. baseline_core
+      = [final_approach_established_idx, complete_idx] (minus any initialization_transient,
+      N/A here since this is a real in-flight approach, not an artificial standardized
+      start).
+  manual_review_needed: false

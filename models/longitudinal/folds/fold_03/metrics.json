@@ -1,0 +1,188 @@
+{
+  "global": {
+    "per_output": {
+      "elevator_effective": {
+        "mse": 0.0005098576075397432,
+        "rmse": 0.02258002758026123,
+        "mae": 0.01485509891062975,
+        "r2": 0.8143810033798218,
+        "pearson_r": 0.9121934349925996,
+        "max_abs_error": 0.11874368041753769,
+        "p95_abs_error": 0.04740356281399727,
+        "saturation_rate_after_clip": 0.0,
+        "mse_after_saturation": 0.0005098576075397432,
+        "n": 1082,
+        "command_rate_mae": 0.0058919647708535194
+      },
+      "throttle_command": {
+        "mse": 0.010441106744110584,
+        "rmse": 0.10218173265457153,
+        "mae": 0.08598340302705765,
+        "r2": 0.8118849992752075,
+        "pearson_r": 0.9131748697500406,
+        "max_abs_error": 0.2252575308084488,
+        "p95_abs_error": 0.17912118136882782,
+        "saturation_rate_after_clip": 0.0,
+        "mse_after_saturation": 0.010441106744110584,
+        "n": 1082,
+        "command_rate_mae": 0.004940062761306763
+      }
+    }
+  },
+  "per_episode": {
+    "voo-2-com-rajada": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.0005098576075397432,
+          "rmse": 0.02258002758026123,
+          "mae": 0.01485509891062975,
+          "r2": 0.8143810033798218,
+          "pearson_r": 0.9121934349925996,
+          "max_abs_error": 0.11874368041753769,
+          "p95_abs_error": 0.04740356281399727,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.0005098576075397432,
+          "n": 1082,
+          "command_rate_mae": 0.0058919647708535194
+        },
+        "throttle_command": {
+          "mse": 0.010441106744110584,
+          "rmse": 0.10218173265457153,
+          "mae": 0.08598340302705765,
+          "r2": 0.8118849992752075,
+          "pearson_r": 0.9131748697500406,
+          "max_abs_error": 0.2252575308084488,
+          "p95_abs_error": 0.17912118136882782,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.010441106744110584,
+          "n": 1082,
+          "command_rate_mae": 0.004940062761306763
+        }
+      }
+    }
+  },
+  "per_phase": {
+    "CONTACT_CANDIDATE": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.002732484368607402,
+          "rmse": 0.05227316915988922,
+          "mae": 0.04531007260084152,
+          "r2": -0.016884326934814453,
+          "pearson_r": 0.5926641416185233,
+          "max_abs_error": 0.11874368041753769,
+          "p95_abs_error": 0.0919136255979538,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.002732484368607402,
+          "n": 75,
+          "command_rate_mae": 0.009693911299109459
+        },
+        "throttle_command": {
+          "mse": 0.020812861621379852,
+          "rmse": 0.14426663517951965,
+          "mae": 0.1422978788614273,
+          "r2": -1.1353209018707275,
+          "pearson_r": -0.2549183764417639,
+          "max_abs_error": 0.18059521913528442,
+          "p95_abs_error": 0.17441853880882263,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.020812861621379852,
+          "n": 75,
+          "command_rate_mae": 0.00747986976057291
+        }
+      }
+    },
+    "FINAL_APPROACH_ESTABLISHED": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.00024638380273245275,
+          "rmse": 0.01569661684334278,
+          "mae": 0.01125118788331747,
+          "r2": 0.8032941818237305,
+          "pearson_r": 0.9031319562374376,
+          "max_abs_error": 0.10829798877239227,
+          "p95_abs_error": 0.030665146186947823,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.00024638380273245275,
+          "n": 947,
+          "command_rate_mae": 0.004952835850417614
+        },
+        "throttle_command": {
+          "mse": 0.010029149241745472,
+          "rmse": 0.10014563798904419,
+          "mae": 0.08323924243450165,
+          "r2": 0.8251295685768127,
+          "pearson_r": 0.9598366029145474,
+          "max_abs_error": 0.2252575308084488,
+          "p95_abs_error": 0.18045692145824432,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.010029149241745472,
+          "n": 947,
+          "command_rate_mae": 0.004669372923672199
+        }
+      }
+    },
+    "FLARE": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.0018900700379163027,
+          "rmse": 0.04347493499517441,
+          "mae": 0.033668119460344315,
+          "r2": 0.4030737280845642,
+          "pearson_r": 0.6616816824768055,
+          "max_abs_error": 0.10753104090690613,
+          "p95_abs_error": 0.09188610315322876,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.0018900700379163027,
+          "n": 60,
+          "command_rate_mae": 0.01612376607954502
+        },
+        "throttle_command": {
+          "mse": 0.003978474531322718,
+          "rmse": 0.06307514756917953,
+          "mae": 0.05890222638845444,
+          "r2": -6.152346611022949,
+          "pearson_r": 0.07810130204356905,
+          "max_abs_error": 0.08936062455177307,
+          "p95_abs_error": 0.08769068866968155,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.003978474531322718,
+          "n": 60,
+          "command_rate_mae": 0.005493624601513147
+        }
+      }
+    }
+  },
+  "per_scenario": {
+    "gust": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.0005098576075397432,
+          "rmse": 0.02258002758026123,
+          "mae": 0.01485509891062975,
+          "r2": 0.8143810033798218,
+          "pearson_r": 0.9121934349925996,
+          "max_abs_error": 0.11874368041753769,
+          "p95_abs_error": 0.04740356281399727,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.0005098576075397432,
+          "n": 1082,
+          "command_rate_mae": 0.0058919647708535194
+        },
+        "throttle_command": {
+          "mse": 0.010441106744110584,
+          "rmse": 0.10218173265457153,
+          "mae": 0.08598340302705765,
+          "r2": 0.8118849992752075,
+          "pearson_r": 0.9131748697500406,
+          "max_abs_error": 0.2252575308084488,
+          "p95_abs_error": 0.17912118136882782,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.010441106744110584,
+          "n": 1082,
+          "command_rate_mae": 0.004940062761306763
+        }
+      }
+    }
+  }
+}

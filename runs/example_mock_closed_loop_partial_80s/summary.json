@@ -1,0 +1,15 @@
+{
+  "run_dir": "/Users/iquenavarro/Desktop/Insper/2026/6 Semestre/Capstone/baseline-model/runs/20260918-112012_active_nominal",
+  "mode": "active",
+  "scenario": "nominal",
+  "outcome": "aborted",
+  "abort_reason": "max_duration_reached",
+  "n_cycles": 812,
+  "final_phase": "FINAL_APPROACH_ESTABLISHED",
+  "touchdown_confirmed": false,
+  "touchdown_confirmed_t": null,
+  "rollout_confirmed_t": null,
+  "n_bounce_events": 0,
+  "n_unconfirmed_contacts": 0,
+  "touchdown_metrics": {}
+}

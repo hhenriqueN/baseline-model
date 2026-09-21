@@ -1,0 +1,23 @@
+{
+  "scenario": "nominal",
+  "mode": "active",
+  "initial_position": {
+    "lat": 63.937566339319524,
+    "lon": -22.605474154108432,
+    "heading": 0.02,
+    "altitude_ft": 800.0,
+    "vc_kt": 65.0
+  },
+  "init_condition": {
+    "along_track_m": -3000.0,
+    "cross_track_m": 0.0,
+    "initial_msl_altitude_ft": 800.0,
+    "airspeed_kt": 65.0,
+    "flaps_init": 0.99,
+    "throttle_init": 0.52,
+    "elevator_trim_fixed": 0.031,
+    "metar": "XXXX 010000Z 00000KT 9999 FEW250 15/10 Q1013 NOSIG"
+  },
+  "weather_metar": "XXXX 010000Z 00000KT 9999 FEW250 15/10 Q1013 NOSIG",
+  "runway_config_path": "/Users/iquenavarro/Desktop/Insper/2026/6 Semestre/Capstone/baseline-model/data/config/runway.yaml"
+}

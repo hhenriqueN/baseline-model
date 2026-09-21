@@ -1,0 +1,17 @@
+episode_id,eligible_for_training,n_unnormalized,n_baseline_core,n_full_approach,n_recovery_ablation
+circuito-completo__landing-01,True,1313,1005,1005,1065
+circuito-completo__landing-02,True,1403,988,1224,988
+turbulencia05,True,1194,1029,1029,1045
+turbulencia08,True,1318,998,998,1039
+voo-2-com-16-nos,True,1314,1096,1096,1116
+voo-2-com-rajada,True,1329,1082,1082,1142
+voo-3-com-16-nos,True,1283,1259,1259,1283
+voo-com-16-nos,True,1437,1306,1306,1369
+voo-com-8-nos,True,1113,874,874,948
+voo-com-rajada-vindo-da-direita,True,1371,1089,1089,1130
+voo-com-rajada,True,1191,1032,1032,1055
+voo-condicoes-normais,True,1229,988,988,1126
+voo-inicio-teste,False,2611,0,0,0
+voo-normal2,True,1218,844,844,935
+voo-normal3,True,1246,894,894,960
+voo2-com-8-nos,True,1228,1024,1024,1053

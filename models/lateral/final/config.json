@@ -1,0 +1,56 @@
+{
+  "network": "lateral",
+  "architecture": {
+    "class": "LateralMLP",
+    "n_inputs": 11,
+    "n_hidden": 64,
+    "n_outputs": 2,
+    "layers": [
+      "Linear(11,64)",
+      "SiLU",
+      "Linear(64,64)",
+      "SiLU",
+      "Linear(64,2)"
+    ],
+    "output_activation": [
+      "linear",
+      "linear"
+    ],
+    "batch_norm": false,
+    "dropout": false
+  },
+  "feature_order": [
+    "along_track_m",
+    "cross_track_error_m",
+    "heading_error_sin",
+    "heading_error_cos",
+    "agl_ft",
+    "roll_deg",
+    "sideslip_rad",
+    "roll_rate_degps",
+    "yaw_rate_degps",
+    "airspeed_kt",
+    "lateral_body_speed_fps"
+  ],
+  "label_order": [
+    "aileron_command",
+    "rudder_command"
+  ],
+  "training_config": {
+    "seed": 42,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "max_epochs": 300,
+    "early_stopping_patience": 25,
+    "grad_clip_norm": 5.0
+  },
+  "n_epochs_trained": 15,
+  "n_epochs_source": "median CV best_epoch (0-indexed) + 1, over 13 LOSO folds",
+  "dataset_version": "baseline_core (final_all_valid, includes fixed diagnostic holdout session)",
+  "scaler_path": "data/scalers/final_all_valid/scaler_final_all_valid.json",
+  "train_csv": "data/scalers/final_all_valid/baseline_core_normalized_all_valid.csv",
+  "n_train_rows": 15508,
+  "note": "No held-out validation for this final fit -- CV (run_cv.py) already selected architecture/hyperparameters/epoch count; official evaluation is closed-loop FlightGear rollouts (future work), not this training run."
+}

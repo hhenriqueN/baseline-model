@@ -1,0 +1,72 @@
+# Tunable, reviewable thresholds for the preprocessing pipeline.
+# All of these are provisional starting points per the task spec; they can be
+# revised here without touching pipeline code.
+schema_version: 1
+
+gear:
+  nose_index: 0        # confirmed empirically: only gear[0] has a non-constant steering-norm
+  main_indices: [1, 2] # confirmed empirically: gear[1]/gear[2] steering-norm are constant 0
+
+landing_segmentation:
+  touchdown_confirm_s: 0.3      # continuous both-main-gear contact to confirm TOUCHDOWN
+  rollout_confirm_s: 0.8        # continuous contact (any gear) to confirm ROLLOUT
+  complete_groundspeed_kt: 5.0  # below this -> candidate COMPLETE
+  complete_duration_s: 2.0      # sustained duration below complete_groundspeed_kt
+  liftoff_complete_s: 1.0       # alternative COMPLETE trigger: sustained loss of all-gear
+                                 # contact with climbing AGL after a confirmed ROLLOUT
+                                 # (needed for touch-and-go landing-01 of circuito-completo,
+                                 # which never drops below 5 kt before taking off again)
+  airborne_gap_min_s: 20.0      # minimum duration of a "clearly airborne" gap (all gear off,
+                                 # AGL above airborne_gap_agl_ft) used to separate the two
+                                 # circuito-completo landings into independent search windows
+  airborne_gap_agl_ft: 50.0
+  diagnostic_long_candidate_s: 2.0  # QA-only threshold (spec section 6): flag (never force a
+                                 # transition for) any CONTACT_CANDIDATE interval lasting at
+                                 # least this long without being confirmed or resolved.
+
+initialization_transient:
+  airspeed_band_kt: [55, 75]
+  min_stable_duration_s: 2.0
+  flaps_stable_std_max: 0.01     # flaps considered "stable" if rolling std below this
+  flaps_nonzero_min: 0.05        # flaps must be > this (non-null configuration)
+  require_inbound_track: true    # along_track_m must be negative (still approaching)
+  min_remaining_approach_s: 5.0  # need at least this much approach left after the transient
+  max_search_s: 30.0             # never search for transient end beyond this many seconds
+                                   # into the episode; if not found by then, keep full episode
+                                   # and flag for manual review
+
+final_approach_detection:
+  # Combination of signals used to flag FINAL_APPROACH_ESTABLISHED for
+  # circuito-completo__landing-02 (baseline_core start point).
+  heading_error_max_deg: 30.0     # aircraft heading within this of runway true heading
+  cross_track_max_m: 150.0       # laterally within this of the extended centerline
+  along_track_max_m: -200.0      # must still be at least this far before the threshold
+  descending_min_fpm: -100.0     # vertical speed more negative than this (descending)
+  min_sustained_s: 3.0           # condition must hold continuously for this long
+
+approach_maneuvering_detection:
+  # Looser combination marking the start of "preparation for the approach"
+  # after the circuit, for full_approach (landing-02 only).
+  heading_error_max_deg: 90.0
+  descending_or_configuring: true  # descent OR flap change from 0, whichever comes first
+  min_sustained_s: 2.0
+
+resampling:
+  target_hz: 10.0
+  filter_order: 2
+  cutoff_hz: 4.0
+  filter_type: causal_butterworth   # never filtfilt (would use future samples)
+
+glideslope_feature:
+  floor_distance_to_threshold_m: 50.0  # below this, hold last valid glideslope_error_deg
+                                          # (angle to threshold becomes singular near/at the
+                                          # threshold; matches real ILS glideslope behavior)
+
+labels:
+  elevator_effective_formula: "elevator_command + elevator_trim"
+  throttle_command_source: "/controls[0]/engines[0]/engine[0]/throttle[0]"
+
+cross_validation:
+  strategy: leave_one_session_out
+  fixed_diagnostic_holdout_scenario: wind_16kt
+  fixed_diagnostic_holdout_selection: "deterministic: sha256(session_id) sorted ascending, first of the three wind_16kt sessions"

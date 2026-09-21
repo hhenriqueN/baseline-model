@@ -1,0 +1,188 @@
+{
+  "global": {
+    "per_output": {
+      "elevator_effective": {
+        "mse": 0.0006156866438686848,
+        "rmse": 0.024813033640384674,
+        "mae": 0.016658933833241463,
+        "r2": 0.7166654467582703,
+        "pearson_r": 0.8552974671741596,
+        "max_abs_error": 0.148488387465477,
+        "p95_abs_error": 0.05568759888410568,
+        "saturation_rate_after_clip": 0.0,
+        "mse_after_saturation": 0.0006156866438686848,
+        "n": 1032,
+        "command_rate_mae": 0.007354614324867725
+      },
+      "throttle_command": {
+        "mse": 0.009058435447514057,
+        "rmse": 0.09517581015825272,
+        "mae": 0.0801851823925972,
+        "r2": 0.7397664189338684,
+        "pearson_r": 0.8884415310024587,
+        "max_abs_error": 0.2511516809463501,
+        "p95_abs_error": 0.1702079027891159,
+        "saturation_rate_after_clip": 0.0,
+        "mse_after_saturation": 0.009058435447514057,
+        "n": 1032,
+        "command_rate_mae": 0.006963313557207584
+      }
+    }
+  },
+  "per_episode": {
+    "voo-com-rajada": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.0006156866438686848,
+          "rmse": 0.024813033640384674,
+          "mae": 0.016658933833241463,
+          "r2": 0.7166654467582703,
+          "pearson_r": 0.8552974671741596,
+          "max_abs_error": 0.148488387465477,
+          "p95_abs_error": 0.05568759888410568,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.0006156866438686848,
+          "n": 1032,
+          "command_rate_mae": 0.007354614324867725
+        },
+        "throttle_command": {
+          "mse": 0.009058435447514057,
+          "rmse": 0.09517581015825272,
+          "mae": 0.0801851823925972,
+          "r2": 0.7397664189338684,
+          "pearson_r": 0.8884415310024587,
+          "max_abs_error": 0.2511516809463501,
+          "p95_abs_error": 0.1702079027891159,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.009058435447514057,
+          "n": 1032,
+          "command_rate_mae": 0.006963313557207584
+        }
+      }
+    }
+  },
+  "per_phase": {
+    "CONTACT_CANDIDATE": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.0030245587695389986,
+          "rmse": 0.05499598756432533,
+          "mae": 0.04269569367170334,
+          "r2": 0.2434435486793518,
+          "pearson_r": 0.5023179625232537,
+          "max_abs_error": 0.11709214746952057,
+          "p95_abs_error": 0.10841725021600723,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.0030245587695389986,
+          "n": 54,
+          "command_rate_mae": 0.017490699887275696
+        },
+        "throttle_command": {
+          "mse": 0.0009719572844915092,
+          "rmse": 0.031176229938864708,
+          "mae": 0.025665057823061943,
+          "r2": NaN,
+          "pearson_r": NaN,
+          "max_abs_error": 0.05716535449028015,
+          "p95_abs_error": 0.05554491654038429,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.0009719572844915092,
+          "n": 54,
+          "command_rate_mae": 0.005070024635642767
+        }
+      }
+    },
+    "FINAL_APPROACH_ESTABLISHED": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.000352664093952626,
+          "rmse": 0.01877935230731964,
+          "mae": 0.01370169036090374,
+          "r2": 0.6493354439735413,
+          "pearson_r": 0.8484699952726529,
+          "max_abs_error": 0.1177840530872345,
+          "p95_abs_error": 0.035471826791763306,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.000352664093952626,
+          "n": 918,
+          "command_rate_mae": 0.005816018674522638
+        },
+        "throttle_command": {
+          "mse": 0.009856179356575012,
+          "rmse": 0.0992782935500145,
+          "mae": 0.08497647196054459,
+          "r2": 0.41037994623184204,
+          "pearson_r": 0.7998505608810946,
+          "max_abs_error": 0.2511516809463501,
+          "p95_abs_error": 0.17239367961883545,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.009856179356575012,
+          "n": 918,
+          "command_rate_mae": 0.007120206486433744
+        }
+      }
+    },
+    "FLARE": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.002471946645528078,
+          "rmse": 0.04971867427229881,
+          "mae": 0.03847166523337364,
+          "r2": -0.050931572914123535,
+          "pearson_r": 0.4741107051444911,
+          "max_abs_error": 0.148488387465477,
+          "p95_abs_error": 0.08752112835645676,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.002471946645528078,
+          "n": 60,
+          "command_rate_mae": 0.022574014961719513
+        },
+        "throttle_command": {
+          "mse": 0.004130792338401079,
+          "rmse": 0.0642712414264679,
+          "mae": 0.05594654008746147,
+          "r2": -29464912.0,
+          "pearson_r": 0.4762614359020665,
+          "max_abs_error": 0.1740981638431549,
+          "p95_abs_error": 0.10796786844730377,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.004130792338401079,
+          "n": 60,
+          "command_rate_mae": 0.00580976065248251
+        }
+      }
+    }
+  },
+  "per_scenario": {
+    "gust": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.0006156866438686848,
+          "rmse": 0.024813033640384674,
+          "mae": 0.016658933833241463,
+          "r2": 0.7166654467582703,
+          "pearson_r": 0.8552974671741596,
+          "max_abs_error": 0.148488387465477,
+          "p95_abs_error": 0.05568759888410568,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.0006156866438686848,
+          "n": 1032,
+          "command_rate_mae": 0.007354614324867725
+        },
+        "throttle_command": {
+          "mse": 0.009058435447514057,
+          "rmse": 0.09517581015825272,
+          "mae": 0.0801851823925972,
+          "r2": 0.7397664189338684,
+          "pearson_r": 0.8884415310024587,
+          "max_abs_error": 0.2511516809463501,
+          "p95_abs_error": 0.1702079027891159,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.009058435447514057,
+          "n": 1032,
+          "command_rate_mae": 0.006963313557207584
+        }
+      }
+    }
+  }
+}

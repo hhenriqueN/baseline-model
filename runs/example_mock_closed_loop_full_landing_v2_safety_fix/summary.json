@@ -1,0 +1,25 @@
+{
+  "run_dir": "/Users/iquenavarro/Desktop/Insper/2026/6 Semestre/Capstone/baseline-model/runs/20260918-112444_active_nominal",
+  "mode": "active",
+  "scenario": "nominal",
+  "outcome": "aborted",
+  "abort_reason": "telemetry_stale_0.55s",
+  "n_cycles": 1356,
+  "final_phase": "ROLLOUT",
+  "touchdown_confirmed": true,
+  "touchdown_confirmed_t": 119.1999999999975,
+  "rollout_confirmed_t": 119.69999999999747,
+  "n_bounce_events": 0,
+  "n_unconfirmed_contacts": 0,
+  "touchdown_metrics": {
+    "t": 119.1999999999975,
+    "lat": 63.973347713199814,
+    "lon": -22.605445735155534,
+    "cross_track_error_m": -7.346417918441261e-11,
+    "heading_error_deg": 0.0,
+    "airspeed_kt": 63.79999999999999,
+    "vertical_speed_fps": 0.0,
+    "roll_deg": 0.0,
+    "pitch_deg": 3.0
+  }
+}

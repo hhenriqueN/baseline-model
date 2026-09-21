@@ -1,0 +1,63 @@
+# Runway geometry configuration — BIKF (Keflavik), landing runway used by the pilot.
+#
+# PROVENANCE / VALIDATION (2026-09-17):
+#   Cross-checked against the local FlightGear install's apt.dat:
+#   ~/Library/Application Support/FlightGear/fgdata_2024_1/Airports/apt.dat.gz
+#   (row for "BIKF Keflavik", runway pair currently coded "02/20").
+#
+#   IMPORTANT DIVERGENCE FOUND AND DOCUMENTED (do not silently resolve):
+#   The task spec calls this "BIKF RWY 01", but the CURRENT apt.dat for this
+#   FlightGear version has NO runway "01" at BIKF — only "02/20" and "11/29".
+#   Keflavik's real-world runway was renumbered 01/19 -> 02/20 around 2013 due
+#   to magnetic variation drift; the physical strip is the same. The spec's
+#   given threshold_latitude_deg/threshold_longitude_deg/true_heading_deg
+#   match the apt.dat "02" threshold to ~5 decimal places (lat diff ~5e-6 deg,
+#   heading diff ~0.002 deg), so we treat the spec's numeric geometry as
+#   correct for the physical runway the pilot actually used, and only the
+#   *name* "RWY 01" is stale. We keep runway_id: "02" (apt.dat truth) while
+#   preserving spec_runway_label for traceability.
+#
+#   runway_length_m: spec said 3054, geometric threshold-to-threshold distance
+#   computed from apt.dat lat/lon via haversine = 3046.41 m (diff ~7.6 m,
+#   ~0.25%). Kept the apt.dat-derived value as canonical; both are recorded.
+#
+#   threshold_elevation_ft: spec said 135 ft. Not directly encoded in this
+#   apt.dat's runway row (older-format rows carry no per-threshold elevation;
+#   airport reference elevation, row code "1", is 170 ft field elevation).
+#   Empirical cross-check: MSL altitude (/position[0]/altitude-ft[0]) at the
+#   first continuous-both-main-gear-contact sample for 3 straight landings
+#   (voo-condicoes-normais, voo-normal2, voo-com-8-nos) was 140.7 / 139.1 /
+#   143.5 ft. Subtracting the empirically observed ~3.5-4 ft AGL sensor/gear
+#   offset (altitude-agl-ft never reads exactly 0 at touchdown, see
+#   cleaning_report.md) gives an estimated ground elevation of ~136-140 ft at
+#   the touchdown points (which are ~700-900 m past the threshold on a very
+#   gently sloped runway) — consistent with the spec's 135 ft. Kept as-is.
+#
+#   glideslope_deg, target_airspeed_kt, flare_agl_ft: operational/procedural
+#   parameters, not present in apt.dat. Kept as given by the spec; loosely
+#   cross-checked against observed data in cleaning_report.md.
+
+runway_id: "02"                      # apt.dat-current designator (see note above)
+spec_runway_label: "RWY 01 (legacy name used in task spec; see provenance note)"
+airport_icao: BIKF
+
+threshold_latitude_deg: 63.96447778
+threshold_longitude_deg: -22.60545278
+true_heading_deg: 0.02
+threshold_elevation_ft: 135
+runway_length_m: 3046.41            # apt.dat-derived geometric length (spec gave 3054)
+runway_length_m_spec_value: 3054
+runway_width_m: 60.05               # apt.dat gives 60.05; spec rounded to 60
+glideslope_deg: 3.0
+target_airspeed_kt: 65
+flare_agl_ft: 20
+
+# opposite-end threshold (apt.dat "20"), kept for reference / geometry sanity checks
+opposite_threshold_latitude_deg: 63.99188019
+opposite_threshold_longitude_deg: -22.60542552
+
+# sign conventions (section 13 of the spec)
+along_track_convention: "negative before threshold, 0 at threshold, positive down the runway"
+cross_track_convention: "0 on runway centerline; sign TBD/tested empirically in pipeline.runway module"
+
+schema_version: 1

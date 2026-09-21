@@ -1,0 +1,68 @@
+{
+  "network": "lateral",
+  "fold_id": 4,
+  "architecture": {
+    "class": "LateralMLP",
+    "n_inputs": 11,
+    "n_hidden": 64,
+    "n_outputs": 2,
+    "layers": [
+      "Linear(11,64)",
+      "SiLU",
+      "Linear(64,64)",
+      "SiLU",
+      "Linear(64,2)"
+    ],
+    "output_activation": [
+      "linear",
+      "linear"
+    ],
+    "batch_norm": false,
+    "dropout": false
+  },
+  "feature_order": [
+    "along_track_m",
+    "cross_track_error_m",
+    "heading_error_sin",
+    "heading_error_cos",
+    "agl_ft",
+    "roll_deg",
+    "sideslip_rad",
+    "roll_rate_degps",
+    "yaw_rate_degps",
+    "airspeed_kt",
+    "lateral_body_speed_fps"
+  ],
+  "label_order": [
+    "aileron_command",
+    "rudder_command"
+  ],
+  "sat_bounds": [
+    [
+      -1.0,
+      1.0
+    ],
+    [
+      -1.0,
+      1.0
+    ]
+  ],
+  "training_config": {
+    "seed": 42,
+    "optimizer": "AdamW",
+    "lr": 0.001,
+    "weight_decay": 0.0001,
+    "batch_size": 256,
+    "max_epochs": 300,
+    "early_stopping_patience": 25,
+    "grad_clip_norm": 5.0
+  },
+  "dataset_version": "baseline_core",
+  "scaler_path": "data/scalers/folds/fold_04_voo-3-com-16-nos.json",
+  "train_csv": "data/splits/normalized_folds/fold_04_train.csv",
+  "val_csv": "data/splits/normalized_folds/fold_04_val.csv",
+  "best_epoch": 2,
+  "best_val_loss": 0.016796091571450233,
+  "n_train_rows": 13153,
+  "n_val_rows": 1259
+}

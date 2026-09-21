@@ -1,0 +1,188 @@
+{
+  "global": {
+    "per_output": {
+      "elevator_effective": {
+        "mse": 0.004726806655526161,
+        "rmse": 0.06875177472829819,
+        "mae": 0.0341019406914711,
+        "r2": 0.10806858539581299,
+        "pearson_r": 0.5842591283818088,
+        "max_abs_error": 0.525341272354126,
+        "p95_abs_error": 0.18288008868694305,
+        "saturation_rate_after_clip": 0.0,
+        "mse_after_saturation": 0.004726806655526161,
+        "n": 1259,
+        "command_rate_mae": 0.008372669108211994
+      },
+      "throttle_command": {
+        "mse": 0.013823878020048141,
+        "rmse": 0.11757498979568481,
+        "mae": 0.08547362685203552,
+        "r2": 0.5451077222824097,
+        "pearson_r": 0.8275345849593422,
+        "max_abs_error": 0.40214619040489197,
+        "p95_abs_error": 0.2908308804035187,
+        "saturation_rate_after_clip": 0.0,
+        "mse_after_saturation": 0.013823878020048141,
+        "n": 1259,
+        "command_rate_mae": 0.006091451738029718
+      }
+    }
+  },
+  "per_episode": {
+    "voo-3-com-16-nos": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.004726806655526161,
+          "rmse": 0.06875177472829819,
+          "mae": 0.0341019406914711,
+          "r2": 0.10806858539581299,
+          "pearson_r": 0.5842591283818088,
+          "max_abs_error": 0.525341272354126,
+          "p95_abs_error": 0.18288008868694305,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.004726806655526161,
+          "n": 1259,
+          "command_rate_mae": 0.008372669108211994
+        },
+        "throttle_command": {
+          "mse": 0.013823878020048141,
+          "rmse": 0.11757498979568481,
+          "mae": 0.08547362685203552,
+          "r2": 0.5451077222824097,
+          "pearson_r": 0.8275345849593422,
+          "max_abs_error": 0.40214619040489197,
+          "p95_abs_error": 0.2908308804035187,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.013823878020048141,
+          "n": 1259,
+          "command_rate_mae": 0.006091451738029718
+        }
+      }
+    }
+  },
+  "per_phase": {
+    "CONTACT_CANDIDATE": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.033665258437395096,
+          "rmse": 0.18348094820976257,
+          "mae": 0.1691603809595108,
+          "r2": -14.071651458740234,
+          "pearson_r": 0.028158583746682425,
+          "max_abs_error": 0.525341272354126,
+          "p95_abs_error": 0.20878849923610687,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.033665258437395096,
+          "n": 84,
+          "command_rate_mae": 0.01580113172531128
+        },
+        "throttle_command": {
+          "mse": 0.07164599746465683,
+          "rmse": 0.2676677107810974,
+          "mae": 0.2549288868904114,
+          "r2": NaN,
+          "pearson_r": NaN,
+          "max_abs_error": 0.40214619040489197,
+          "p95_abs_error": 0.2980932593345642,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.07164599746465683,
+          "n": 84,
+          "command_rate_mae": 0.024537919089198112
+        }
+      }
+    },
+    "FINAL_APPROACH_ESTABLISHED": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.0004132773319724947,
+          "rmse": 0.020329223945736885,
+          "mae": 0.014703530818223953,
+          "r2": 0.8123700022697449,
+          "pearson_r": 0.9106596452800836,
+          "max_abs_error": 0.11411727964878082,
+          "p95_abs_error": 0.04042311757802963,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.0004132773319724947,
+          "n": 1050,
+          "command_rate_mae": 0.006988874636590481
+        },
+        "throttle_command": {
+          "mse": 0.008837530389428139,
+          "rmse": 0.09400814026594162,
+          "mae": 0.07059075683355331,
+          "r2": 0.6729247570037842,
+          "pearson_r": 0.8454645369722407,
+          "max_abs_error": 0.27399155497550964,
+          "p95_abs_error": 0.21248705685138702,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.008837530389428139,
+          "n": 1050,
+          "command_rate_mae": 0.004610945004969835
+        }
+      }
+    },
+    "FLARE": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.021513814106583595,
+          "rmse": 0.14667588472366333,
+          "mae": 0.10628929734230042,
+          "r2": -0.6757234334945679,
+          "pearson_r": -0.1786293657032457,
+          "max_abs_error": 0.45721113681793213,
+          "p95_abs_error": 0.2972249388694763,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.021513814106583595,
+          "n": 125,
+          "command_rate_mae": 0.021284865215420723
+        },
+        "throttle_command": {
+          "mse": 0.01685275137424469,
+          "rmse": 0.1298181414604187,
+          "mae": 0.09661589562892914,
+          "r2": NaN,
+          "pearson_r": NaN,
+          "max_abs_error": 0.36845508217811584,
+          "p95_abs_error": 0.3240112066268921,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.01685275137424469,
+          "n": 125,
+          "command_rate_mae": 0.01780976541340351
+        }
+      }
+    }
+  },
+  "per_scenario": {
+    "wind_16kt": {
+      "per_output": {
+        "elevator_effective": {
+          "mse": 0.004726806655526161,
+          "rmse": 0.06875177472829819,
+          "mae": 0.0341019406914711,
+          "r2": 0.10806858539581299,
+          "pearson_r": 0.5842591283818088,
+          "max_abs_error": 0.525341272354126,
+          "p95_abs_error": 0.18288008868694305,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.004726806655526161,
+          "n": 1259,
+          "command_rate_mae": 0.008372669108211994
+        },
+        "throttle_command": {
+          "mse": 0.013823878020048141,
+          "rmse": 0.11757498979568481,
+          "mae": 0.08547362685203552,
+          "r2": 0.5451077222824097,
+          "pearson_r": 0.8275345849593422,
+          "max_abs_error": 0.40214619040489197,
+          "p95_abs_error": 0.2908308804035187,
+          "saturation_rate_after_clip": 0.0,
+          "mse_after_saturation": 0.013823878020048141,
+          "n": 1259,
+          "command_rate_mae": 0.006091451738029718
+        }
+      }
+    }
+  }
+}
